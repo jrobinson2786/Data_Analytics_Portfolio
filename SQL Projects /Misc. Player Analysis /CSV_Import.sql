@@ -1,6 +1,6 @@
------------------------------------------
---------------Create Tables--------------
------------------------------------------
+/*
+Create tables for analysis.
+*/
 
 CREATE TABLE player_login (
 	user_id varchar (10),
