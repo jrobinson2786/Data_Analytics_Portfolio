@@ -100,7 +100,7 @@ SELECT
 	max_damage
 FROM player_deaths
 JOIN min_max_damage ON damage_taken = min_max_damage.min_damage 
-					OR damage_taken = min_max_damage.max_damage
+		    OR damage_taken = min_max_damage.max_damage
 ORDER BY 
 	min_damage, 
 	max_damage
