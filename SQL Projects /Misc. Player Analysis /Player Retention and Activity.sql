@@ -98,6 +98,8 @@ ORDER BY
 /*
 Top Player: e2b9d4a6f8 ........ 8 damage
 Bottom Player: c5d8a9f1e2 .... 68 damage
+
+Note: Direct correllation with most/least deaths. 
 */
 
 ----- what time of day do players die the most
@@ -128,5 +130,9 @@ Evening ...... 8
 
 It appears that more deaths occur in the morning, 
 between the hours of 6 and 11
+
+Note: Could be useful in determining player segmentation, 
+eg: what time of day do certain players play? 
+ie: more casual players play in the morning.
 */
 
