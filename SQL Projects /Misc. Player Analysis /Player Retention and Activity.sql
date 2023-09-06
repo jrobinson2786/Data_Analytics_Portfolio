@@ -86,37 +86,18 @@ least deaths:
 User: e2b9d4a6f8 ... 1 death
 */
 
------ what player took the most/least damage?
-WITH min_max_damage AS (
-	SELECT 
-		MIN(damage_taken) AS min_damage, 
-		MAX(damage_taken) AS max_damage 
-	FROM player_deaths
-)
-SELECT 
-	user_id AS top_players, 
-	min_damage, 
-	user_id AS bottom_players, 
-	max_damage
+-- what player took the most/least damage?
+SELECT
+	user_id, 
+	SUM(damage_taken)
 FROM player_deaths
-JOIN min_max_damage ON damage_taken = min_max_damage.min_damage 
-		    OR damage_taken = min_max_damage.max_damage
+GROUP BY user_id 
 ORDER BY 
-	min_damage, 
-	max_damage
+	SUM(damage_taken) DESC
 		
 /*
-player ... damage taken
-
-Top players: 
-c5d8a9f1e2 ... 1
-8b0e7f3c9a ... 1
-8b0e7f3c9a ... 1
-
-Bottom Players: 
-c5d8a9f1e2 ... 17
-8b0e7f3c9a ... 17
-8b0e7f3c9a ... 17
+Top Player: e2b9d4a6f8 ........ 8 damage
+Bottom Player: c5d8a9f1e2 .... 68 damage
 */
 
 ----- what time of day do players die the most
