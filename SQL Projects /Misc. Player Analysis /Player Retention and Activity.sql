@@ -11,7 +11,7 @@ Objectives
 - also if you pretend that instead of "last login" it's "first_login" (the first table) you can then make more sense since some of those sample players would have to play many days on end without logging out otherwise
 */
 
------ What does player retention look like? ---- 
+----- What does player retention look like? 
 WITH player_retention AS (
 	SELECT 
 		f.user_id,
@@ -70,7 +70,7 @@ f1d5a7e0c9 ... 10
 e2b9d4a6f8 .... 8
 */
 
--- which player died the most/least
+----- which player died the most/least
 SELECT 
 	user_id, 
 	COUNT(user_id)
@@ -86,7 +86,7 @@ least deaths:
 User: e2b9d4a6f8 ... 1 death
 */
 
--- what player took the most/least damage?
+----- what player took the most/least damage?
 WITH min_max_damage AS (
 	SELECT 
 		MIN(damage_taken) AS min_damage, 
@@ -119,7 +119,7 @@ c5d8a9f1e2 ... 17
 8b0e7f3c9a ... 17
 */
 
--- what time of day do players die the most
+----- what time of day do players die the most
 WITH day_time AS (
 	SELECT 
 		user_id, 
