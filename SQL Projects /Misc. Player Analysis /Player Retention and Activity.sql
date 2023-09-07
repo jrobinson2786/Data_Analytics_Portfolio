@@ -86,6 +86,22 @@ least deaths:
 User: e2b9d4a6f8 ... 1 death
 */
 
+	
+-- What is the average damage taken? 
+SELECT 
+	ROUND(AVG(damage_taken), 2) AS avg_dmg_taken
+FROM player_deaths
+
+----------OR-------------
+
+SELECT
+	ROUND(SUM(damage_taken) / COUNT(user_id), 2) AS avg_dmg_taken
+FROM player_deaths
+/*
+The average damage taken among the group is ~9.00 points. 
+*/
+
+	
 -- what player took the most/least damage?
 SELECT
 	user_id, 
@@ -96,8 +112,8 @@ ORDER BY
 	SUM(damage_taken) DESC
 		
 /*
-Top Player: e2b9d4a6f8 ........ 8 damage
-Bottom Player: c5d8a9f1e2 .... 68 damage
+Top Player: e2b9d4a6f8 ........ 8 points
+Bottom Player: c5d8a9f1e2 .... 68 points
 */
 
 ----- what time of day do players die the most
