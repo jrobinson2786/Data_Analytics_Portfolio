@@ -98,8 +98,6 @@ ORDER BY
 /*
 Top Player: e2b9d4a6f8 ........ 8 damage
 Bottom Player: c5d8a9f1e2 .... 68 damage
-
-Note: Direct correllation with most/least deaths. 
 */
 
 ----- what time of day do players die the most
