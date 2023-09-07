@@ -70,7 +70,7 @@ f1d5a7e0c9 ... 10
 e2b9d4a6f8 .... 8
 */
 
------ which player died the most/least
+----- which player died the most/least?
 SELECT 
 	user_id, 
 	COUNT(user_id)
