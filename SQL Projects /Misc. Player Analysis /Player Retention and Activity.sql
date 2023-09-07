@@ -87,18 +87,12 @@ User: e2b9d4a6f8 ... 1 death
 */
 
 	
--- What is the average damage taken? 
-SELECT 
-	ROUND(AVG(damage_taken), 2) AS avg_dmg_taken
-FROM player_deaths
-
-----------OR-------------
-
+-- What is the average damage taken per player? 
 SELECT
-	ROUND(SUM(damage_taken) / COUNT(user_id), 2) AS avg_dmg_taken
+	ROUND(SUM(damage_taken) / COUNT(DISTINCT user_id), 2) AS avg_dmg_taken
 FROM player_deaths
 /*
-The average damage taken among the group is ~9.00 points. 
+The average damage taken among the group is ~36.00 points/player. 
 */
 
 	
