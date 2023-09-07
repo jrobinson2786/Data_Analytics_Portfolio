@@ -1,5 +1,5 @@
 ## Data Analytics Portfolio
-This repository serves as portfolio and is meant to demonstrate some of the coding that I've done for analytics. 
+Here are some of the data projects that I've done. This is a work in progress.
 
 
 # Here are some links to some other things that I've done.
