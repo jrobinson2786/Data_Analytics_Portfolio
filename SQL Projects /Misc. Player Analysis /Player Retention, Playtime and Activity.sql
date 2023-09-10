@@ -76,8 +76,8 @@ FROM
 	remaining_players, 
 	total_players
 /*
-Using the average player retention rate of 6.05 days as a benchmark (ie: players that have played more than the average), 
 The player retention rate is: 42.86%
+Using the average player retention rate of 6.05 days as a benchmark (ie: players that have played more than the average), 
 */	
 
 ----- what is the total damage that each player took?
