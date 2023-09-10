@@ -87,7 +87,7 @@ User: e2b9d4a6f8 ... 1 death
 */
 
 	
--- What is the average damage taken per player? 
+-- What is the average damage taken? 
 SELECT
 	ROUND(SUM(damage_taken) / COUNT(DISTINCT user_id), 2) AS avg_dmg_taken
 FROM player_deaths
