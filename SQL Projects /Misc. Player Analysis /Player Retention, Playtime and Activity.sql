@@ -48,6 +48,37 @@ a3e7b4c0d9... 09.87 days .. 236.80 hours .. 14,203.18 minutes .. 852491.00 secon
 7d1b0e6f4a... 07.68 days .. 184.34 hours .. 11,060.45 minutes .. 663627.00 seconds
 */
 
+----- What is the player retention rate? 
+WITH playtime AS (
+    SELECT 
+        f.user_id AS players,
+        f.first_log_time AS first_login, 
+        l.last_log_time AS last_login,
+        EXTRACT(EPOCH FROM (l.last_log_time - f.first_log_time) / 86400) AS player_lifetime
+    FROM first_login f
+    JOIN last_login l
+    ON f.user_id = l.user_id 
+),
+remaining_players AS (
+	SELECT 
+		COUNT(players) AS remaining_players
+	FROM playtime
+	WHERE player_lifetime >= 6.05
+),
+total_players AS(
+	SELECT 
+		COUNT(players) AS total_players
+	FROM playtime	
+)
+SELECT 
+	ROUND((remaining_players::numeric / total_players:: numeric)*100, 2) AS player_retention
+FROM 
+	remaining_players, 
+	total_players
+/*
+Using the average player retention rate of 6.05 days as a benchmark (ie: players that have played more than the average), 
+The player retention rate is: 42.86%
+*/	
 
 ----- what is the total damage that each player took?
 SELECT 
