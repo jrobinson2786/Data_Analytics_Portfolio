@@ -11,8 +11,8 @@ Objectives
 - also if you pretend that instead of "last login" it's "first_login" (the first table) you can then make more sense since some of those sample players would have to play many days on end without logging out otherwise
 */
 
------ What does player retention look like? 
-WITH player_retention AS (
+----- What does player playtime look like? 
+WITH playtime AS (
 	SELECT 
 		f.user_id,
 		f.first_log_time, 
@@ -28,14 +28,14 @@ SELECT
 	ROUND((player_lifetime) / 3600, 2) AS hours,
 	ROUND((player_lifetime) / 60, 2) AS minutes,
 	ROUND((player_lifetime), 2) AS seconds
-FROM player_retention
+FROM playtime
 WHERE player_lifetime >= 0
 ORDER BY hours DESC;
 ---------------------------------------------------------
 SELECT 
 	ROUND(AVG(player_lifetime) / 86400, 2) AS avg_days,
 	ROUND(AVG(player_lifetime) / 3600, 2) AS avg_hours
-FROM player_retention
+FROM playtime
 WHERE player_lifetime >= 0;
 
 /*
