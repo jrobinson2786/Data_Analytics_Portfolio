@@ -61,13 +61,13 @@ WITH playtime AS (
 ),
 remaining_players AS (
 	SELECT 
-		COUNT(players:: numeric) AS remaining_players
+		COUNT(players):: numeric AS remaining_players
 	FROM playtime
 	WHERE player_lifetime >= 6.05
 ),
 total_players AS(
 	SELECT 
-		COUNT(players:: numeric) AS total_players
+		COUNT(players):: numeric AS total_players
 	FROM playtime	
 )
 SELECT 
