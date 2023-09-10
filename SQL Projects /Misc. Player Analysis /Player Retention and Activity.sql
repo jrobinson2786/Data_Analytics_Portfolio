@@ -72,8 +72,8 @@ e2b9d4a6f8 .... 8
 
 ----- which player died the most/least?
 SELECT 
-	user_id, 
-	COUNT(user_id)
+	user_id AS player, 
+	COUNT(user_id) AS num_deaths
 FROM player_deaths 
 GROUP BY user_id
 ORDER BY 
