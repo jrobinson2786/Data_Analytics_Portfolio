@@ -10,8 +10,48 @@ Objectives
 
 - also if you pretend that instead of "last login" it's "first_login" (the first table) you can then make more sense since some of those sample players would have to play many days on end without logging out otherwise
 */
+WITH baseline AS (
+	SELECT 
+		user_id AS player, 
+		DATE(time_death) AS date
+	FROM player_deaths
+),
+start_date AS (
+	SELECT 
+		MIN(date) AS day_0
+	FROM baseline
+),
+retention AS (
+	SELECT 
+		player, 	
+		CASE 
+			WHEN date = (SELECT day_0 FROM start_date) THEN 'D00'
+			WHEN date = (SELECT day_0 FROM start_date) + INTERVAL '1 DAY' THEN 'D01' 
+			WHEN date = (SELECT day_0 FROM start_date) + INTERVAL '6 DAY' THEN 'D06'
+			WHEN date = (SELECT day_0 FROM start_date) + INTERVAL '12 DAY' THEN 'D11'
+		END AS dx_segment
+	FROM baseline
+)
+SELECT
+	dx_segment,
+	COUNT(player),
+	ROUND(COUNT(player) / (SELECT COUNT(user_id)::numeric FROM player_deaths)*100, 2) AS "DX_%"
+FROM retention  
+WHERE dx_segment IS NOT NULL
+GROUP BY dx_segment
+ORDER BY dx_segment
 
------ What does player playtime look like? 
+/*
+dx_segment | count  |   DX_%  |
+-----------+--------+---------+
+       D00 |      1 |    2.50 |
+       D01 |      1 |    2.50 |
+       D06 |      3 |    7.50 |
+       D11 |     18 |   45.00 | 
+-----------+--------+---------+
+*/
+	
+----- What does playtime look like? 
 WITH playtime AS (
 	SELECT 
 		f.user_id,
@@ -40,15 +80,21 @@ WHERE player_lifetime >= 0;
 
 /*
 The avg. player lifetime is: 
-6.05 days .. 145.23 hours
+days  |   Hours  |
+------+----------+
+6.05  |  145.23  |
+
 
 Top 3 players with the most time are: 
-d5a0c8e2f.... 12.85 days .. 308.33 hours .. 18,499.97 minutes .. 1109998.00 seconds
-a3e7b4c0d9... 09.87 days .. 236.80 hours .. 14,203.18 minutes .. 852491.00 seconds
-7d1b0e6f4a... 07.68 days .. 184.34 hours .. 11,060.45 minutes .. 663627.00 seconds
+  players   |     days    |   hours     |    minutes    |      seconds    |
+------------+-------------+-------------+---------------+-----------------+
+d5a0c8e2f   |      12.85  |     308.33  |    18,499.97  |    1109998.00   |
+a3e7b4c0d9  |      09.87  |     236.80  |    14,203.18  |     852491.00   |
+7d1b0e6f4a  |      07.68  |     184.34  |    11,060.45  |     663627.00   |
+------------+-------------+-------------+---------------+-----------------+
 */
 
------ What is the player retention rate? 
+----- what percentage of poeple are still playing? 
 WITH playtime AS (
     SELECT 
         f.user_id AS players,
@@ -89,16 +135,19 @@ GROUP BY user_id
 ORDER BY 
 	SUM(damage_taken) DESC;	
 /*
-c5d8a9f1e2 ... 68
-9e1a3c7f5b ... 65
-d7f1e9b2a4 ... 61
-4d6a2f8c1e ... 60
-8b0e7f3c9a ... 56
-a2e4f8c6b0 ... 13
-b6f2d5a8c0 ... 11
-f1d5a7e0c9 ... 10
-3a5c7e9b1d .... 9
-e2b9d4a6f8 .... 8
+   player   |   total_damage  |
+------------+-----------------+
+c5d8a9f1e2  |            68   | 
+9e1a3c7f5b  |            65   |
+d7f1e9b2a4  |            61   |
+4d6a2f8c1e  |            60   |
+8b0e7f3c9a  |            56   |
+a2e4f8c6b0  |            13   |
+b6f2d5a8c0  |            11   |
+f1d5a7e0c9  |            10   |
+3a5c7e9b1d  |             9   |
+e2b9d4a6f8  |             8   |
+------------+-----------------+
 */
 
 ----- which player died the most/least?
@@ -111,10 +160,16 @@ ORDER BY
 	COUNT(user_id) DESC
 /*
 most deaths: 
-User: c5d8a9f1e2 ... 7 deaths
+      user   |  deaths  |
+-------------+----------+
+c5d8a9f1e2   |       7  |
+-------------+----------+
 
 least deaths: 
-User: e2b9d4a6f8 ... 1 death
+      user   |  deaths  |
+-------------+----------+ 
+e2b9d4a6f8   |       1  |
+-------------+----------+
 */
 
 	
@@ -137,8 +192,17 @@ ORDER BY
 	SUM(damage_taken) DESC
 		
 /*
-Top Player: e2b9d4a6f8 ........ 8 points
-Bottom Player: c5d8a9f1e2 .... 68 points
+Top Player: 
+    player   |  damage  |
+-------------+----------+
+e2b9d4a6f8   |      8   |
+-------------+----------+
+	
+Bottom Player: 
+    player   |  damage  |
+-------------|----------|
+c5d8a9f1e2   |     68   | 
+-------------+----------+
 */
 
 ----- what time of day do players die the most
@@ -162,10 +226,13 @@ ORDER BY
 	COUNT(user_id) DESC
 
 /*
-Morning ..... 13
-Afternoon ... 11
-Night ........ 8 
-Evening ...... 8
+time of day  |  deaths  |
+-------------+----------+
+Morning      |     13   |
+Afternoon    |     11   |  
+Night        |      8   |
+Evening      |      8   |
+-------------+----------+
 
 It appears that more deaths occur in the morning, 
 between the hours of 6 and 11
