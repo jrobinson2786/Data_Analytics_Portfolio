@@ -74,6 +74,7 @@ The avg. player lifetime is:
 days  |   Hours  |
 ------+----------+
 6.05  |  145.23  |
+------+----------+
 
 
 Top 3 players with the most time are: 
