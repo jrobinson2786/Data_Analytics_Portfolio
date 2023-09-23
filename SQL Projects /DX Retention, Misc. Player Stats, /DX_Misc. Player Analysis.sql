@@ -61,7 +61,7 @@ which is meant to measure player dropoff.
 
 ----- The following are some miscellaneous player analytics featuring rankings, aggregations, and summaries. 
 
------ What is the acerage player lifetime? 
+----- What is the average player lifetime? 
 WITH playtime AS (
 	SELECT 
 		f.user_id,
@@ -138,6 +138,7 @@ Where the average plater lifetime being 6.05 days, the number of players still p
 */	
 
 	
+----- Player Rankings.	
 ----- what is the total damage that each player took?
 SELECT 
 	user_id AS player,
