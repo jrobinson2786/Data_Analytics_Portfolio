@@ -219,8 +219,8 @@ e2b9d4a6f8   |       1  |
 -------------+----------+
 */
 
-	
------ what time of day do players die the most
+----- Player Segmentation
+----- what time of day do players die the most?
 WITH day_time AS (
 	SELECT 
 		user_id, 
