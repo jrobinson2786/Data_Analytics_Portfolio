@@ -1,6 +1,14 @@
 
 ----- DX Retention Analysis
 
+/*
+NOTES: 
+1. For the purpose of the dx analysis, the timestamp in "player_deaths" will be used as the "player_login"
+After this first analysis, the timestamp ACTUALLY represents player deaths. 
+2. DX analysis typically focuses on: D0, D1, D7, D14, D30; 
+however, I switched the days to work within the confines of the dataset. 
+*/
+
 WITH baseline AS (
 	SELECT 
 		user_id AS player, 
@@ -12,8 +20,6 @@ start_date AS (
 		MIN(date) AS day_0
 	FROM baseline
 ),
-----NOTE: DX analysis typically focuses on: D0, D1, D7, D14, D30; 
-----However, I switched the days to work within the confines of the dataset. 
 retention AS (
 	SELECT 
 		player, 	
