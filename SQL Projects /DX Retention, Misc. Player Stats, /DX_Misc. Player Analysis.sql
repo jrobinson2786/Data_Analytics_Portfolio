@@ -48,13 +48,20 @@ dx_segment | count  |   DX_%  |
        D06 |      3 |    7.50 |
        D11 |     18 |   45.00 | 
 -----------+--------+---------+
+
+NOTE: 
+The curve described above is an upward trend whch indicates an increasing userbase
+1 player on launch, 3 players by day 6 and 18 players by day 11. 
+	
+It should be noted that dx analysis is usually a downward trend 
+which is meant to measure player dropoff.  
 */
 
 --------------------------------------------------------------------------------------------------
 
 ----- The following are some miscellaneous player analytics featuring rankings, aggregations, and summaries. 
 
------ What does playtime look like? 
+----- What is the acerage player lifetime? 
 WITH playtime AS (
 	SELECT 
 		f.user_id,
@@ -126,10 +133,11 @@ FROM
 	remaining_players, 
 	total_players
 /*
-The player retention rate is: 42.86%
-Using the average player retention rate of 6.05 days as a benchmark (ie: players that have played more than the average), 
+Using the average player lifetime as a benchmark, 
+Where the average plater lifetime being 6.05 days, the number of players still playing is 42.86%
 */	
 
+	
 ----- what is the total damage that each player took?
 SELECT 
 	user_id AS player,
@@ -154,35 +162,13 @@ e2b9d4a6f8  |             8   |
 ------------+-----------------+
 */
 
------ which player died the most/least?
-SELECT 
-	user_id AS player, 
-	COUNT(user_id) AS num_deaths
-FROM player_deaths 
-GROUP BY user_id
-ORDER BY 
-	COUNT(user_id) DESC
-/*
-most deaths: 
-      user   |  deaths  |
--------------+----------+
-c5d8a9f1e2   |       7  |
--------------+----------+
 
-least deaths: 
-      user   |  deaths  |
--------------+----------+ 
-e2b9d4a6f8   |       1  |
--------------+----------+
-*/
-
-	
--- What is the average damage taken? 
+-- What is the average total damage taken? 
 SELECT
 	ROUND(SUM(damage_taken) / COUNT(DISTINCT user_id), 2) AS avg_dmg_taken
 FROM player_deaths
 /*
-The average damage taken among the group is ~36.00 points/player. 
+The average total damage taken among the group is ~36.00 points. 
 */
 
 	
@@ -209,6 +195,30 @@ c5d8a9f1e2   |     68   |
 -------------+----------+
 */
 
+	
+----- which player died the most/least?
+SELECT 
+	user_id AS player, 
+	COUNT(user_id) AS num_deaths
+FROM player_deaths 
+GROUP BY user_id
+ORDER BY 
+	COUNT(user_id) DESC
+/*
+most deaths: 
+      user   |  deaths  |
+-------------+----------+
+c5d8a9f1e2   |       7  |
+-------------+----------+
+
+least deaths: 
+      user   |  deaths  |
+-------------+----------+ 
+e2b9d4a6f8   |       1  |
+-------------+----------+
+*/
+
+	
 ----- what time of day do players die the most
 WITH day_time AS (
 	SELECT 
