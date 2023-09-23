@@ -252,7 +252,7 @@ Evening      |      8   |
 It appears that more deaths occur in the morning, 
 between the hours of 6 and 11
 
-Note: Could be useful in determining player segmentation, 
+Note: Could be useful for a deeper segmentation analysis. 
 eg: what time of day do certain players play? 
 ie: more casual players play in the morning.
 */
