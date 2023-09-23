@@ -49,7 +49,11 @@ dx_segment | count  |   DX_%  |
        D11 |     18 |   45.00 | 
 -----------+--------+---------+
 */
-	
+
+--------------------------------------------------------------------------------------------------
+
+----- The following are some miscellaneous player analytics featuring rankings, aggregations, and summaries. 
+
 ----- What does playtime look like? 
 WITH playtime AS (
 	SELECT 
