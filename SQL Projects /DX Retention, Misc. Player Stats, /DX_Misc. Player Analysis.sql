@@ -12,6 +12,8 @@ start_date AS (
 		MIN(date) AS day_0
 	FROM baseline
 ),
+----NOTE: DX analysis typically focuses on: D0, D1, D7, D14, D30; 
+----However, I switched the days to work within the confines of the dataset. 
 retention AS (
 	SELECT 
 		player, 	
