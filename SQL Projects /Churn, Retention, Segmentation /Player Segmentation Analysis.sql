@@ -81,7 +81,7 @@ segmentation AS (
 )
 
 /*
-Grouped by level progress represented as a percentage. 
+A count of distinct players grouped by level progress represented as a rank based on the completion percentage above. 
 
 player_segment   | player_count | 
 -----------------+--------------+
@@ -92,9 +92,8 @@ Rank 4 	         |        2163  |
 --------------------------------+
 */
 
--- Create a join function to rejoin segmentation and base_data CTEs
--- Next step: find commonalities between the different tiers -- adjust the tiers if necessary. 
 
+---- Characteristics of segmentation analysis. 
 ,
 segmentation_insights AS (
 	SELECT 
