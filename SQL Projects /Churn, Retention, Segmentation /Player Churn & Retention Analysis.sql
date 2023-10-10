@@ -1,6 +1,6 @@
------------------------------------------------------------------------------
-------------Combined data for player churn/retention analysis.---------------
------------------------------------------------------------------------------
+
+------Combined data for player churn/retention analysis
+
 WITH total_users AS(
 	SELECT * 
 	FROM train
@@ -13,17 +13,11 @@ WITH total_users AS(
 	SELECT 
 	 	tu.user_id AS players
 	,	tu.label
-	,	ls.level_id AS level
-	,	ls.success 
-	,	ls.duration
-	,	ls.help 
 	,	DATE(ls.date_time) AS date
 	FROM total_users tu
 	JOIN level_seq ls
 	ON tu.user_id = ls.user_id
 )
-  
-------------------------------------------------------------------------------
 ----- overall player churn rate between 02.01 and 02.04
 ,total_count AS (
 	SELECT 
@@ -71,7 +65,7 @@ ORDER BY date
 -------------+---------------+-------------+
 2020-02-01   |	      4960   |      99.14  |
 2020-02-02   |	      4253   |      85.01  |
-2020-02-03	 |        3517   |      70.30  |
-2020-02-04	 |        3121   |      62.38  |
+2020-02-03   |        3517   |      70.30  |
+2020-02-04   |        3121   |      62.38  |
 -------------+---------------+-------------+
 */
