@@ -121,7 +121,6 @@ GROUP BY player_segment
 ORDER BY player_segment
 
 /*
-/*
 player_segment | player_count | avg_retries | avg_time_spent | avg_win_duration | help_used |
 ---------------+--------------+-------------+----------------+------------------+-----------+
 Rank 1	       |          75  |	      2.56  |         85.00  |	        114.39  |      822  |
