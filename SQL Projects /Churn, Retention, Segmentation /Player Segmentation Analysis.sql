@@ -10,6 +10,7 @@ WITH base_data AS (
 	,	ls.duration
 	,	lm.avg_passrate
 	,	lm.avg_win_duration
+	,	lm.avg_retrytimes
 	FROM level_meta lm
 	JOIN level_seq ls
 	ON lm.level_id = ls.level_id
@@ -102,6 +103,7 @@ segmentation_insights AS (
 	, 	bs.avg_passrate
 	,	bs.duration
 	,	bs.avg_win_duration
+	,	bs.avg_retrytimes
 	,	s.player_segment
 	FROM base_data bs
 	JOIN segmentation s
@@ -110,6 +112,7 @@ segmentation_insights AS (
 SELECT 
 	player_segment
 ,	COUNT(DISTINCT player) AS player_count
+,	ROUND(AVG(avg_retrytimes), 2) AS retries
 ,	ROUND(AVG(duration), 2) AS avg_time_spent
 ,	ROUND(AVG(avg_win_duration), 2) AS avg_win_duration
 ,	SUM(help) AS help_used
@@ -118,11 +121,20 @@ GROUP BY player_segment
 ORDER BY player_segment
 
 /*
-player_segment | player_count | avg_time_spent  | avg_win_duration | help_used |
----------------+--------------+-----------------+------------------+-----------+
-Rank 1	       |          75  |         85.00   |          114.39  |      822  |
-Rank 2	       |        1358  |        107.48   |          114.79  |    18055  |
-Rank 3         |        2659  |        113.71   |          110.11  |    20787  |
-Rank 4	       |        2163  |        100.36   |          100.38  |     7186  |
--------------------------------------------------------------------------------+
+/*
+player_segment | player_count | avg_retries | avg_time_spent | avg_win_duration | help_used |
+---------------+--------------+-------------+----------------+------------------+-----------+
+Rank 1	       |          75  |	      2.56  |         85.00  |	        114.39  |      822  |
+Rank 2	       |        1358  |	      1.81  |        107.48  |          114.79  |    18055  |
+Rank 3	       |        2659  |	      0.73  |        113.71  |          110.11  |    20787  |
+Rank 4	       |        2163  |	      0.30  |        100.36  |          100.38  |     7186  |
+--------------------------------------------------------------------------------------------+
+*/
+
+Notes: 
+Player Segment -- Ranking of players based on level completion. 
+Player Count -- The number of players in each segment. 
+Average Time spent -- The average amount of time spent on each level. 
+Average Win Duration 
+
 */
