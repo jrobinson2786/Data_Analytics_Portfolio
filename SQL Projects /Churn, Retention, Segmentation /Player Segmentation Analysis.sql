@@ -131,10 +131,11 @@ Rank 4	       |        2163  |	      0.30  |        100.36  |          100.38  |
 --------------------------------------------------------------------------------------------+
 */
 
+/*
 Notes: 
 Player Segment -- Ranking of players based on level completion. 
 Player Count -- The number of players in each segment. 
 Average Time spent -- The average amount of time spent on each level. 
-Average Win Duration 
-
+Average Win Duration -- average time spent on each clearance. 
+Help Used -- number of hints or artifacts used by rank. 
 */
