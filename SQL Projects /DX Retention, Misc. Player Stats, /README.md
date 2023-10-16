@@ -1,11 +1,15 @@
 
-Objectives:
-- join the tables to find the total seconds between logins and logouts
-- answer "how much damage did each player take in total"
-- what was the average damage taken per death
-- what player died the most/least
-- what time of day do players die the most (lol not really something anyone would ask)
 
-- also for more advanced stuff you'll want to know retention. So if you assume that instead of deaths those are sessions/logins, you can sort of work out retention data and create retention funnels
+## Dx Retention, Misc. Player Stats
 
-- also if you pretend that instead of "last login" it's "first_login" (the first table) you can then make more sense since some of those sample players would have to play many days on end without logging out otherwise
+This project was completed by using some sample data that was generated using ChatGPT with the help of a friend and mentor who works in the videogame industry. 
+
+NOTE: A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the data which doesn't have that many days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered.
+
+* I started by creating tables by importing CSV files.
+* I begin the analysis by completing the Dx analysis with the output depicting the number of players on the target day.
+* Next, I determined the average player lifetime, the percentage of people who are playing above average, as well as identified the top 3 players who's playtime was above the average.  
+* Next, I ranked the players based on the total amount of damage each player took, calculated the average amount of damage taken, and identified the players who took the most/least amount of damage.
+* I then identified the players who died the most/least.
+* I thought it would be a fun exercise to identify the time of day that players tended to die the most. Not that there are any inherent uses for this, but It COULD be the start of a solid segmentation proiject. 
+
