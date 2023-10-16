@@ -1,5 +1,5 @@
 
-##Player Churn, Retention, & Segmentation
+#Player Churn, Retention, & Segmentation
 
 I thought this would be a fun project and it falls within a domain of interest. Full disclosure: I don't quite know how to do a segmentation analysis, but I managed to piece something together through articles and various other resources.  
 
