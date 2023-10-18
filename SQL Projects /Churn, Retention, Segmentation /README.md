@@ -4,7 +4,7 @@ Player Churn, Retention, & Segmentation
 
 I thought this would be a fun project and it falls within a domain of interest. Full disclosure: I don't quite know how to do a segmentation analysis, but I managed to piece something together through articles and various other resources.  
 
-* I start with a player churn analysis, which indicates the percentage of players that have stopped player the game within the given timeframe. (NOTE: This is just an overall churn to gain insights into the data and the games engagement. I did a Dx analysis in a different project ([Link]) (https://github.com/jrobinson2786/Data_Analytics_Portfolio/tree/main/SQL%20Projects%20/DX%20Retention%2C%20Misc.%20Player%20Stats%2C%20)) 
+* I start with a player churn analysis, which indicates the percentage of players that have stopped player the game within the given timeframe. (NOTE: This is just an overall churn to gain insights into the data and the games engagement. I did a Dx analysis in a different project ([Link]) (https://github.com/jrobinson2786/Data_Analytics_Portfolio/tree/main/SQL%20Projects%20/DX%20Retention%2C%20Misc.%20Player%20Stats%2C%20) 
 
 * Then I conduct a player retention analysis which presents the number of player still engaged as well as a percentage of the total within the given timeframe. 
 
