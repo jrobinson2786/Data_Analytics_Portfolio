@@ -13,7 +13,7 @@ I thought this would be a fun project and it falls within a domain of interest. 
 One important insight that I've discovered while researching segmentation is that these projects have a tendency to start with a general idea then evolve over time with more relevant metrics and user segments. From what I understand, one of the most important aspects of the project are the conversations that it inspires between teammates and stakeholders.
 
 --------------------------------------------------------------------
-##Here are some the resources that I used for this project: 
+Here are some the resources that I used for this project: 
 --------------------------------------------------------------------
 * Data Source: Prediction of User Loss in Mobile Games | by Manvictor ([Link]) (https://www.kaggle.com/datasets/manchvictor/prediction-of-user-loss-in-mobile-games)
   - As the title implies, this dataset was initially meant for a machine learning project to predict the the palyer churn rate for a mobile level climber game. A project like that exceeds my current abilities (for now), So I thought it would be a fun project to derive insights from the existing data, even though it only covers four days.
