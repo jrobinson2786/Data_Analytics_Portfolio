@@ -17,7 +17,7 @@ One important insight that I've discovered while researching segmentation is tha
 * Data Source: Prediction of User Loss in Mobile Games | by Manvictor ([Link]) (https://www.kaggle.com/datasets/manchvictor/prediction-of-user-loss-in-mobile-games)
   - As the title implies, this dataset was initially meant for a machine learning project to predict the the palyer churn rate for a mobile level climber game. A project like that exceeds my current abilities (for now), So I thought it would be a fun project to derive insights from the existing data, even though it only covers four days.
 
-* Here are some articles and other resources (in addition to ChatGPT) that used to try and gain an understanding of the churn, retention, and Segmentation process:
+* ### Here are some articles and other resources (in addition to ChatGPT) that used to try and gain an understanding of the churn, retention, and Segmentation process:
   - "User Segmentation Approaches for Games" | by Alyssa Perez [Link] (https://medium.com/googleplaydev/user-segmentation-approaches-for-games-4457aa57d56e)
   -  "Player SEgments Based on Gaming Motivation" | Quantic Foundry [Link] (https://quanticfoundry.com/2020/08/17/player-segments/)
       -- Note: This is a great resource for understanding segmentation, but the data I had for this particular project just didn't go that far. I'll probably use this article again in the future.    
