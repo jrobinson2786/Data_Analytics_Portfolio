@@ -20,4 +20,4 @@ One important insight that I've discovered while researching segmentation is tha
 * ### Here are some articles and other resources (in addition to ChatGPT) that used to try and gain an understanding of the churn, retention, and Segmentation process:
   - "User Segmentation Approaches for Games" | by Alyssa Perez [Link](https://medium.com/googleplaydev/user-segmentation-approaches-for-games-4457aa57d56e)
   -  "Player SEgments Based on Gaming Motivation" | Quantic Foundry [Link](https://quanticfoundry.com/2020/08/17/player-segments/)
-      -- Note: This is a great resource for understanding segmentation, but the data I had for this particular project just didn't go that far. I'll probably use this article again in the future.    
+      - Note: This is a great resource for understanding segmentation, but the data I had for this particular project just didn't go that far. I'll probably use this article again in the future.    
