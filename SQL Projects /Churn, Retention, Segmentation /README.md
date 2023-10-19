@@ -9,7 +9,7 @@ I thought this would be a fun project and it falls within a domain of interest. 
 
 * Finally, for the segmentation, calculated each player's completion percentage and grouped the players into segments based on the percentage of levels that they completed in 25% increments. This allowed me to analyze the average tendencies of each group (ie: help used, retry times, success time, etc.)
 
-One important insight that I've discovered while researching segmentation is that these projects have a tendency to start with a general idea then evolve over time with more relevant metrics and user segments. From what I understand, one of the most important aspects of the project are the conversations that it inspires between teammates and stakeholders.
+One important insight that I've discovered while researching segmentation is that these projects have a tendency to start with a general idea then evolve over time with more relevant metrics and user segments. I've learned that one of the most important aspects of the project are the conversations that it inspires between teammates and stakeholders.
 
 
 ## Resources: 
