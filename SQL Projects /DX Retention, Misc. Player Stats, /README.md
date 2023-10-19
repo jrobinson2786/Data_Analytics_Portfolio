@@ -7,7 +7,7 @@ This project was completed by using some sample data that was generated using Ch
 NOTE: A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the data which doesn't have that many days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered.
 
 * I started by creating tables by importing CSV files.
-* I begin the analysis by completing the Dx analysis with the output depicting the number of players on the target day.
+* I took the "player_deaths" column and used them for "player_logins" in order to begin to work out a retention metric. For the duration of the project, that property is actually used to analyze player deaths. 
 * Next, I determined the average player lifetime, the percentage of people who are playing above average, as well as identified the top 3 players who's playtime was above the average.  
 * Next, I ranked the players based on the total amount of damage each player took, calculated the average amount of damage taken, and identified the players who took the most/least amount of damage.
 * I then identified the players who died the most/least.
