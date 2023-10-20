@@ -2,7 +2,7 @@
 
 ## Dx Retention, Misc. Player Stats
 
-This project was completed by using some sample data that was generated with ChatGPT with the help of a friend / mentor who works in the videogame industry. In addition to Dx retention, the data exploration is wrapped up into the analysis to insights into player activity. 
+This project was completed by using some sample data that was generated with ChatGPT and the help of a friend / mentor who works in the videogame industry. In addition to Dx retention, the data exploration is wrapped up into the analysis to insights into player activity. 
 
 NOTE: A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the available data which doesn't contain the relevant days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered.  ¯\\\_(ツ)\_/¯ 
 
