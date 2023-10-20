@@ -4,10 +4,12 @@
 
 This project was completed by using some sample data that was generated with ChatGPT and the help of a friend / mentor who works in the videogame industry. In addition to Dx retention, the data exploration is wrapped up into the analysis to insights into player activity. 
 
-NOTE: A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the available data which doesn't contain the relevant days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered.  ¯\\\_(ツ)\_/¯ 
+NOTES:
+* For the Dx analysis, I took the "time_death" column and used them for "player_logins" in order to begin to work out a retention metric. This is because there are just more timestamps to work with than the actual login data. For the duration of the project, the "time_death" attribute from player_deaths is actually used to analyze player deaths. The rest of the analysis should be easier
+* A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the available data which doesn't contain the relevant days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered.  ¯\\\_(ツ)\_/¯ 
 
 * I started by creating tables by importing CSV files.
-* I took the "player_deaths" column and used them for "player_logins" in order to begin to work out a retention metric. For the duration of the project, that property is actually used to analyze player deaths. 
+* Then I worked out a rough Dx analysis. 
 * Next, I determined the average player lifetime, the percentage of people who are playing above average, as well as identified the top 3 players who's playtime was above the average.  
 * Next, I ranked the players based on the total amount of damage each player took, calculated the average amount of damage taken, and identified the players who took the most/least amount of damage.
 * I then identified the players who died the most/least.
