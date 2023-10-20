@@ -1,4 +1,5 @@
 -- Creating the database -- 
+-- NOTE: The following data sets were randomely generated using ChatGPT. 
 
 CREATE TABLE first_login (
 	user_id varchar (10),
