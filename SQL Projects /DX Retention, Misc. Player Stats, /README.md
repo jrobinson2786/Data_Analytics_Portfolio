@@ -2,9 +2,9 @@
 
 ## Dx Retention, Misc. Player Stats
 
-This project was completed by using some sample data that was generated using ChatGPT with the help of a friend and mentor who works in the videogame industry. 
+This project was completed by using some sample data that was generated using ChatGPT with the help of a friend / mentor who works in the videogame industry. In addition to Dx retention, the data exploration is wrapped up into the analysis to uncover player insights. 
 
-NOTE: A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the data which doesn't have that many days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered.
+NOTE: A Dx analysis typically explores player number of players on D0 - launch, D1 - the first day, D14, & D30. THIS Dx analysis is created around the available data which doesn't contain the relevant days. I suppose I could have just labeled the dates to fit, but for demonstrative purposes, I didn't think that it really mattered. ¯\_(ツ)_/¯
 
 * I started by creating tables by importing CSV files.
 * I took the "player_deaths" column and used them for "player_logins" in order to begin to work out a retention metric. For the duration of the project, that property is actually used to analyze player deaths. 
