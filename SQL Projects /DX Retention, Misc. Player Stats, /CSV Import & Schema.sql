@@ -2,8 +2,8 @@
 -- NOTE: The following data sets were randomely generated using ChatGPT. 
 
 CREATE TABLE first_login (
-	user_id varchar (10),
-	first_log_time timestamp
+	user_id varchar (10)
+,	first_log_time timestamp
 );
 
 COPY first_login 
@@ -31,8 +31,8 @@ c4d9a2b8e    |    2023-08-22 05:37:15  |
 */
 
 CREATE TABLE last_login (
-	user_id varchar(10),
-	last_log_time timestamp
+	user_id varchar(10)
+,	last_log_time timestamp
 );
 
 COPY last_login 
@@ -60,9 +60,9 @@ c4d9a2b8e    |	  2023-08-26 08:37:50  |
 */
 
 CREATE TABLE player_deaths (
-	user_id varchar(10),
-	time_death timestamp,
-	damage_taken integer
+	user_id varchar(10)
+,	time_death timestamp
+,	damage_taken integer
 );
 
 COPY player_deaths 
