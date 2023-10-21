@@ -1,5 +1,7 @@
 ## Data Analytics Portfolio
-Here are some of the data projects that I've done. This is a work in progress.
+This is a work in progress. 
+
+These are some of the data projects that I've completed, though I'm always making minor adjustments to optiize as I grow as a data analyst and as I become more familiar with various domains of interest.   
 
 
 # Here are some links to some other things that I've done.
