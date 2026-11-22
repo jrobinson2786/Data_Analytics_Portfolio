@@ -2,7 +2,7 @@
 
 # Dx Retention, Misc. Player Stats
 
-This project was completed by using some sample data that was generated with ChatGPT and the help of a friend / mentor who works in the videogame industry. In addition to Dx retention, the data exploration is wrapped up into the analysis to insights into player activity. 
+This project was completed by using some sample data that was generated with ChatGPT and the help of a friend / mentor who works in the games industry. In addition to Dx retention, the data exploration is wrapped up into the analysis of insights into player activity. 
 
 ## NOTES:
 * For the Dx analysis, I took the "time_death" column and used them for "player_logins" in order to begin to work out a retention metric. This is because there are just more timestamps to work with than the actual login data. For the duration of the project, the "time_death" attribute from player_deaths is actually used to analyze player deaths. The rest of the analysis should be easier
