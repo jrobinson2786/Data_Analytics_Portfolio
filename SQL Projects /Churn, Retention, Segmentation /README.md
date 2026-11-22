@@ -1,15 +1,15 @@
 # Player Churn, Retention, & Segmentation
 
 
-I thought this would be a fun project and it falls within a domain of interest. Full disclosure: I don't quite know how to do a segmentation analysis, but I managed to piece something together through articles and various other resources.  
+I thought this would be a fun project and it falls within a domain of interest. Full disclosure: I did not quite know how to do a segmentation analysis, but I managed to piece something together through articles and various other resources.  
 
-* I start with a player churn analysis, which indicates the percentage of players that have stopped player the game within the given timeframe. (NOTE: This is just an overall churn to gain insights into the data and the games engagement. I did a Dx analysis in a different project [Link](https://github.com/jrobinson2786/Data_Analytics_Portfolio/tree/main/SQL%20Projects%20/DX%20Retention%2C%20Misc.%20Player%20Stats%2C%20) 
+* I start with a player churn analysis: The cchurn analysis indicates the percentage of players that have stopped playing the game within the given timeframe. (NOTE: This is just an overall churn to gain insights into the data and the games engagement. I did a Dx analysis in a different project [Link](https://github.com/jrobinson2786/Data_Analytics_Portfolio/tree/main/SQL%20Projects%20/DX%20Retention%2C%20Misc.%20Player%20Stats%2C%20) 
 
-* Then I conduct a player retention analysis which presents the number of player still engaged as well as a percentage of the total within the given timeframe. 
+* Then I conduct a player retention analysis which presents the number of players that are still engaged as well as a percentage of the total within the given timeframe. 
 
-* Finally, for the segmentation, calculated each player's completion percentage and grouped the players into segments based on the percentage of levels that they completed in 25% increments. This allowed me to analyze the average tendencies of each group (ie: help used, retry times, success time, etc.)
+* Finally, for the segmentation, I calculated each player's completion percentage and grouped the players into segments based on the percentage of levels that they completed in 25% increments. This allowed me to analyze the average tendencies of each group (ie: help used, retry times, success time, etc.)
 
-One important insight that I've discovered while researching segmentation is that these projects have a tendency to start with a general idea then evolve over time with more relevant metrics and user segments. I've learned that one of the most important aspects of the project are the conversations that it inspires between teammates and stakeholders.
+What I've learned about the project: One important insight that I've discovered while researching segmentation is that these projects have a tendency to start with a general idea then evolve over time with more relevant metrics and user segments. I've learned that one of the most important aspects of the project are the conversations that it inspires between teammates and stakeholders.
 
 
 ## Resources: 
